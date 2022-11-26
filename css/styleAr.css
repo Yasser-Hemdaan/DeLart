@@ -1,0 +1,1320 @@
+/* @font-face {
+  font-family: GE Dinar One;
+  src: url(../assets/fonts/ARIAL.woff);
+} */
+
+:root {
+  --primary: #f8f8f8;
+  --secondary: #000;
+  --textColor: #edb41e;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  background-color: var(--primary);
+  font-family: 'GE Dinar One';
+}
+
+.overlay {
+  background-color: var(--secondary);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+}
+
+.language a {
+  position: fixed;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: white;
+  bottom: 50%;
+  left: -37px;
+  transform: translateY(-50%) rotate(270deg);
+  padding: 10px 25px;
+  text-transform: capitalize;
+  user-select: none;
+  z-index: 999;
+  transition: 0.3s all ease-in-out;
+  background-color: #000;
+  border: 0;
+  outline: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-decoration: none;
+}
+
+.language a:hover {
+  background-color: #edb41e;
+  color: #f8f8f8;
+}
+
+#header {
+  background-image: url(../assets/img/home/cover.webp);
+  position: relative;
+}
+
+#header .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f8f8f8;
+}
+
+#header .content img {
+  width: 275px;
+}
+
+.mainSec {
+  min-height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.secContent {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.secContent>h2 {
+  color: #f8f8f8;
+  font-size: 40px;
+  text-transform: capitalize;
+  text-shadow: black 2px 2px 2px;
+}
+
+.secContent>a {
+  text-decoration: none;
+  background-color: #edb41e;
+  padding: 10px 25px;
+  color: #f8f8f8;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+#sec1 {
+  background-image: url(../assets/img/home/01.webp);
+}
+
+#sec2 {
+  background-image: url(../assets/img/home/02.webp);
+}
+
+#sec3 {
+  background-image: url(../assets/img/home/03.webp);
+}
+
+#sec4 {
+  background-image: url(../assets/img/home/04.webp);
+}
+
+#sec5 {
+  background-image: url(../assets/img/home/05.webp);
+}
+
+#sec6 {
+  background-image: url(../assets/img/home/06.webp);
+}
+
+
+/*
+=========================================
+                About Us
+=========================================
+*/
+
+.nav {
+  padding: 15px 85px;
+  width: 100%;
+  background-color: rgba(248, 248, 248, 0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px 2px;
+  position: fixed;
+  z-index: 99;
+  top: -80px;
+  transition: 0.2s all ease-in-out;
+}
+
+img {
+  width: 120px;
+}
+
+.icon-navicon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.navBody {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -100vh;
+  right: 0;
+  background-color: rgba(0, 0, 0);
+  z-index: 100;
+  transition: 0.5s all ease-out;
+  text-transform: uppercase;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas: "homeItem aboutItem servicesItem interiorItem exteriorItem furnitureItem EngineeringConsultancyItem";
+}
+
+.menu ul li {
+  height: 100vh;
+  list-style-type: none;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #f8f8f8;
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8vw;
+}
+
+.homeItem,
+.aboutItem,
+.servicesItem,
+.interiorItem,
+.exteriorItem,
+.furnitureItem,
+.EngineeringConsultancyItem {
+  filter: grayscale(100%);
+  transition: 0.3s all ease-in-out;
+  text-shadow: #000 0 0 10px;
+}
+
+.homeItem:hover,
+.aboutItem:hover,
+.servicesItem:hover,
+.interiorItem:hover,
+.exteriorItem:hover,
+.furnitureItem:hover,
+.EngineeringConsultancyItem:hover {
+  filter: none;
+}
+
+.homeItem {
+  grid-area: homeItem;
+  background-image: url(../assets/img/aboutus/01.webp);
+}
+
+.aboutItem {
+  grid-area: aboutItem;
+  background-image: url(../assets/img/aboutus/02.webp);
+}
+
+.servicesItem {
+  grid-area: servicesItem;
+  background-image: url(../assets/img/aboutus/03.webp);
+}
+
+.interiorItem {
+  grid-area: interiorItem;
+  background-image: url(../assets/img/aboutus/04.webp);
+}
+
+.exteriorItem {
+  grid-area: exteriorItem;
+  background-image: url(../assets/img/aboutus/05.webp);
+}
+
+.furnitureItem {
+  grid-area: furnitureItem;
+  background-image: url(../assets/img/projects/interior/interior-spaces/space5.jpg);
+}
+
+.EngineeringConsultancyItem {
+  grid-area: EngineeringConsultancyItem;
+  background-image: url(../assets/img/projects/exterior/exterior-buildig/exterior1.webp);
+}
+
+.close {
+  width: 100%;
+  position: relative;
+  background-color: var(--primary);
+  right: 20px;
+  top: 20px;
+  z-index: 999;
+}
+
+.icon-close {
+  color: var(--primary);
+  position: absolute;
+  right: 0;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.icon-close:hover {
+  text-shadow: var(--textColor) 0 2.5px 7.5px;
+}
+
+.aboutHeader {
+  min-height: 100vh;
+  background-image: url(../assets/img//home/05.webp);
+  background-attachment: fixed;
+  background-position: bottom;
+  position: relative;
+  background-size: cover;
+}
+
+.aboutOverlay {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  opacity: 0.6;
+}
+
+.aboutHeaderContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--primary);
+  font-size: 32px;
+  position: relative;
+}
+
+.aboutHeaderContent>h2 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+
+.aboutContent {
+  direction: rtl;
+  height: auto;
+  width: 80%;
+  margin: 50px auto;
+  background-color: var(--primary);
+  border-bottom: 2px solid var(--textColor);
+}
+
+.adv {
+  width: 100%;
+  display: flex;
+  padding: 20px 50px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 15px;
+  flex-wrap: wrap;
+  background-color: #eee;
+  border-right: 2px solid #edb41e;
+  border-left: 2px solid #edb41e;
+}
+
+.advItem {
+  width: calc(96% / 3) !important;
+  border-left: 2px solid #ddd;
+  min-height: 300px;
+  height: auto;
+}
+
+.advItem:last-child {
+  border: none;
+}
+
+.advItem .title h3 {
+  color: var(--textColor);
+  font-size: 26px;
+  text-transform: capitalize;
+}
+
+.advItem .script p {
+  line-height: normal;
+  text-align: justify;
+  padding: 20px 0;
+}
+
+.aboutContent h2 {
+  font-size: 32px;
+  color: var(--textColor);
+  text-transform: capitalize;
+  position: relative;
+}
+
+.aboutContent h2::after {
+  content: "";
+  height: 2px;
+  width: 30px;
+  background: var(--textColor);
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+}
+
+.aboutContent p {
+  padding: 18px 15px;
+  position: relative;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.showcase {
+  padding: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.showcase .Project {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  padding: 0 2px;
+}
+
+.showcase .Project img {
+  width: 100%;
+  filter: grayscale();
+  transition: 0.2s all ease-in-out;
+}
+
+.showcase .Project:hover img {
+  filter: initial;
+}
+
+.projectDetails {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s all ease-in-out;
+  opacity: 0;
+}
+
+.showcase .Project:hover .projectDetails {
+  opacity: 1;
+}
+
+.projectDetails a {
+  text-decoration: none;
+  background-color: #edb41e;
+  padding: 10px 25px;
+  color: #f8f8f8;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+}
+
+.ftContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 0.75fr 0.75fr;
+  grid-gap: 60px;
+  padding: 50px 100px;
+  background-color: var(--secondary);
+  direction: rtl;
+}
+
+.ftSec h3 {
+  position: relative;
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.ftSec h3::before {
+  content: '';
+
+}
+
+.ftSec p {
+  color: var(--primary);
+  line-height: 18px;
+}
+
+.ftSec li {
+  list-style-type: none;
+}
+
+.ftSec ul li a {
+  all: unset;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.social {
+  margin-top: 20px;
+  display: grid;
+  width: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.social li a span {
+  font-size: 18px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-radius: 5px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all ease-in;
+}
+
+.social li a span:hover {
+  color: var(--textColor);
+  background-color: var(--secondary);
+}
+
+.ftQuickLinks ul li a {
+  line-height: 23px;
+  transition: 0.2s all ease-in;
+}
+
+.ftQuickLinks ul li a:hover {
+  color: var(--textColor);
+}
+
+.ftContact ul li a {
+  line-height: 23px;
+  transition: 0.2s all ease-in;
+}
+
+.ftContact ul li a:hover {
+  color: var(--textColor);
+}
+
+.ftContact ul li a span {
+  margin-right: 10px;
+}
+
+
+
+/*
+=========================================
+                About Us
+=========================================
+*/
+
+.services {
+  width: 90%;
+  max-width: 900px;
+  height: 150px;
+  border-radius: 5px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s all ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.services:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: transparent;
+}
+
+.services:hover .sidebar {
+  background-color: var(--textColor);
+}
+
+.services:hover .icon-arrow-up,
+.services:hover .icon-arrow-down {
+  color: var(--primary);
+}
+
+.sliedCollection {
+  position: absolute;
+  padding: 20px 0;
+  top: 0;
+  transition: 0.2s all ease-in-out;
+}
+
+.slide {
+  padding-right: 60px;
+  padding-left: 20px;
+  text-align: left;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.slide h3 {
+  font-size: 22px;
+  text-transform: capitalize;
+  text-align: right;
+  color: var(--textColor);
+  padding: 0 10px;
+}
+
+.slide p {
+  text-transform: capitalize;
+  text-align: right;
+  font-size: 20px;
+}
+
+.sidebar {
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  color: var(--primary);
+  transition: 0.2s all ease-in-out;
+}
+
+.icon-arrow-up,
+.icon-arrow-down {
+  color: var(--textColor);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 1281px) {
+  /*
+  ======================
+  Homepage
+  =====================
+  */
+
+  /*
+  ======================
+  About us
+  =====================
+  */
+
+  .aboutHeaderContent h2 {
+    font-size: 76px;
+  }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  /*
+  ======================
+  Homepage
+  =====================
+  */
+  #header .content img {
+    width: 275px;
+  }
+
+  /*
+  ======================
+  About us
+  =====================
+  */
+
+  .aboutHeaderContent h2 {
+    font-size: 72px;
+  }
+
+  .aboutContent {
+    margin: 40px auto;
+  }
+
+  .advItem {
+    width: 100% !important;
+    border: none;
+    min-height: 100px;
+  }
+
+  .advItem .title h3 {
+    font-size: 22px;
+  }
+
+  .aboutContent h2 {
+    font-size: 28px;
+  }
+
+  .aboutContent p {
+    font-size: 16px;
+  }
+
+  .ftContainer {
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-gap: 40px;
+    padding: 50px 100px;
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /*
+  ======================
+  Homepage
+  =====================
+  */
+
+  #header .content img {
+    width: 275px;
+  }
+
+  /*
+  ======================
+  About us
+  =====================
+  */
+  .aboutContent {
+    margin: 40px auto;
+  }
+
+  .advItem {
+    width: 100% !important;
+    border: none;
+    min-height: 100px;
+  }
+
+  .advItem .title h3 {
+    font-size: 20px;
+  }
+
+  .aboutHeaderContent h2 {
+    font-size: 64px;
+  }
+
+  .aboutContent h2 {
+    font-size: 26px;
+  }
+
+  .aboutContent p {
+    font-size: 15px;
+    padding: 16px 40px;
+  }
+
+  .ftContainer {
+    grid-template-columns: 2fr;
+    grid-gap: 40px;
+    padding: 50px 100px;
+  }
+
+  /*
+  ======================
+  Services
+  =====================
+  */
+
+  .slide h3 {
+    font-size: 16px;
+  }
+
+  .slide p {
+    font-size: 12px;
+  }
+
+  .sidebar {
+    width: 60px;
+    padding: 15px 0;
+  }
+
+  .icon-arrow-up,
+  .icon-arrow-down {
+    font-size: 20px;
+  }
+}
+
+/* 
+     ##Device = Tablets, Ipads (landscape)
+     ##Screen = B/w 768px to 1024px
+   */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /*
+  ======================
+  Homepage
+  =====================
+  */
+
+  /*
+  ======================
+  About us
+  =====================
+  */
+
+  .aboutContent {
+    margin: 30px auto;
+  }
+
+  .advItem {
+    width: 100% !important;
+    border: none;
+    min-height: 100px;
+  }
+
+  .advItem .title h3 {
+    font-size: 20px;
+  }
+
+  .aboutHeaderContent h2 {
+    font-size: 64px;
+  }
+
+  .aboutContent h2 {
+    font-size: 26px;
+  }
+
+  .aboutContent p {
+    font-size: 15px;
+    padding: 16px 40px;
+  }
+
+  .projectDetails a {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+
+  .ftContainer {
+    grid-template-columns: 2fr;
+    grid-gap: 40px;
+    padding: 50px 100px;
+  }
+
+  /*
+  ======================
+  Services
+  =====================
+  */
+
+  .slide h3 {
+    font-size: 10px;
+  }
+
+  .slide p {
+    font-size: 12px;
+  }
+
+  .sidebar {
+    width: 60px;
+    padding: 15px 0;
+  }
+
+  .icon-arrow-up,
+  .icon-arrow-down {
+    font-size: 20px;
+  }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /*
+  ======================
+  Homepage
+  =====================
+  */
+
+  #header .content img {
+    width: 200px;
+  }
+
+  .aboutContent {
+    margin: 25px auto;
+  }
+
+  .adv {
+    padding: 20px 30px;
+  }
+
+  .advItem {
+    width: 100% !important;
+    border: none;
+    min-height: 100px;
+  }
+
+  .advItem .title h3 {
+    font-size: 18px;
+  }
+
+  .secContent>h2 {
+    font-size: 32px;
+  }
+
+  .secContent>a {
+    padding: 8px 20px;
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  /*
+  ======================
+  About us
+  =====================
+  */
+
+
+  .menu ul li a::before {
+    bottom: -5.5px;
+    left: -9.5px;
+  }
+
+  .menu ul li a::after {
+    left: -9.5px;
+    bottom: -5px;
+  }
+
+  .icon-close {
+    font-size: 32px;
+  }
+
+  .aboutHeaderContent h2 {
+    font-size: 48px;
+  }
+
+  .nav {
+    padding: 15px 50px;
+  }
+
+  .aboutContent h2 {
+    font-size: 24px;
+  }
+
+  .aboutContent p {
+    font-size: 14px;
+    padding: 14px 30px;
+  }
+
+  .showcase .Project {
+    width: 100%;
+  }
+
+  .projectDetails a {
+    padding: 9px 22px;
+    font-size: 18px;
+  }
+
+  .ftContainer {
+    grid-template-columns: 2fr;
+    grid-gap: 40px;
+    padding: 50px;
+  }
+
+  /*
+  ======================
+  Services
+  =====================
+  */
+
+  .services {
+    height: 160px;
+  }
+
+  .slide h3 {
+    font-size: 12px;
+  }
+
+  .slide p {
+    font-size: 9px;
+    line-height: 20px;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 60px;
+    padding: 15px 0;
+  }
+
+  .icon-arrow-up,
+  .icon-arrow-down {
+    font-size: 17px;
+  }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /*
+  ======================
+  Homepage
+  =====================
+  */
+
+  #header .content img {
+    width: 175px;
+  }
+
+  .aboutContent {
+    margin: 20px auto;
+  }
+
+  .adv {
+    padding: 20px;
+  }
+
+  .advItem {
+    width: 100% !important;
+    border: none;
+    min-height: 100px;
+  }
+
+  .advItem .title h3 {
+    font-size: 16px;
+  }
+
+  .secContent>h2 {
+    font-size: 28px;
+  }
+
+  .secContent>a {
+    padding: 6px 15px;
+    margin-top: 14px;
+    font-size: 14px;
+  }
+
+  /*
+  ======================
+  About us
+  =====================
+  */
+
+  .menu ul li a::before {
+    bottom: -5.5px;
+    left: -9.5px;
+  }
+
+  .menu ul li a::after {
+    left: -9.5px;
+    bottom: -5px;
+  }
+
+  .icon-close {
+    font-size: 28px;
+  }
+
+  .aboutHeaderContent h2 {
+    font-size: 40px;
+  }
+
+  .nav {
+    padding: 15px 25px;
+  }
+
+  .aboutContent h2 {
+    font-size: 20px;
+  }
+
+  .aboutContent p {
+    font-size: 10px;
+    padding: 10px 25px;
+  }
+
+  .showcase .Project {
+    width: 100%;
+  }
+
+  .projectDetails a {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+
+  .ftContainer {
+    grid-template-columns: 2fr;
+    grid-gap: 35px;
+    padding: 50px;
+  }
+
+  .ftSec ul li a {
+    font-size: 14px;
+  }
+
+
+
+  .ftSec h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .ftSec p {
+    line-height: 18px;
+    font-size: 14px;
+  }
+
+
+  .social {
+    margin-top: 20px;
+    grid-gap: 10px;
+  }
+
+  .social li a span {
+    font-size: 14px;
+    width: 28px;
+    height: 28px;
+  }
+
+
+  /*
+  ======================
+  Services
+  =====================
+  */
+
+  .services {
+    height: 16 0px;
+  }
+
+  .slide {
+    padding: 20px 40px 40px 20px;
+  }
+
+  .slide h3 {
+    font-size: 10px;
+  }
+
+  .slide p {
+    font-size: 7px;
+    line-height: 15px;
+    padding: 20px 0 !important;
+  }
+
+  .sidebar {
+    width: 40px;
+  }
+
+  .icon-arrow-up,
+  .icon-arrow-down {
+    font-size: 15px;
+  }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = 320px to lower resolution devices
+  */
+
+@media (max-width: 320px) {
+  /*
+  ======================
+  Homepage
+  =====================
+  */
+
+  #header .content img {
+    width: 175px;
+  }
+
+  .aboutContent {
+    margin: 20px auto;
+  }
+
+  .adv {
+    padding: 10px;
+  }
+
+  .advItem {
+    width: 100% !important;
+    border: none;
+    min-height: 100px;
+  }
+
+  .advItem .title h3 {
+    font-size: 14px;
+  }
+
+  .secContent>h2 {
+    font-size: 16px;
+  }
+
+  .secContent>a {
+    padding: 4px 10px;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  /*
+  ======================
+  About us
+  =====================
+  */
+
+  .menu ul li a::before {
+    bottom: -7.5px;
+    left: -7.5px;
+  }
+
+  .menu ul li a::after {
+    left: -7.5px;
+    bottom: -5px;
+  }
+
+  .icon-close {
+    font-size: 22px;
+  }
+
+  .aboutHeaderContent h2 {
+    font-size: 28px;
+  }
+
+  .nav {
+    padding: 15px 25px;
+  }
+
+  .aboutContent h2 {
+    font-size: 14px;
+  }
+
+  .aboutContent p {
+    font-size: 8px;
+    padding: 8px 20px;
+  }
+
+  .showcase .Project {
+    width: 100%;
+  }
+
+  .projectDetails a {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+
+  .ftContainer {
+    grid-template-columns: 2fr;
+    grid-gap: 35px;
+    padding: 20px;
+  }
+
+  .ftSec ul li a {
+    font-size: 14px;
+  }
+
+
+
+  .ftSec h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .ftSec p {
+    line-height: 18px;
+    font-size: 14px;
+  }
+
+
+  .social {
+    margin-top: 20px;
+    grid-gap: 2px;
+  }
+
+  .social li a span {
+    font-size: 14px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .services {
+    height: 120px;
+  }
+
+  .slide h3 {
+    font-size: 8px;
+  }
+
+  .slide p {
+    font-size: 6px;
+    line-height: 10px;
+    padding: 20px 0 !important;
+  }
+
+  .sidebar {
+    width: 30px;
+  }
+
+  .icon-arrow-up,
+  .icon-arrow-down {
+    font-size: 15px;
+  }
+}
